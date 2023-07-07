@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <title>Modals</title>
+</head>
+
+<body>
+    <div class="container-fluid">
+        <!--trigger modal-->
+        <button class="btn btn-primary" data-toggle="modal" data-target="#myModal">
+            show Modal
+        </button>
+
+
+        <!--modals-->
+        <div class="modal fade" id="myModal" tabindex="-1">
+            <!--to center modal include the class below :: modal-dialog-centered-->
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModelLabel">Modal title</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Quas fugiat at beatae tempora est animi magni,
+                        voluptatum eligendi id quasi excepturi aut minima ex minus totam voluptates alias vel optio?
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">close</button>
+                        <button type="button" class="btn btn-primary">Save Changes</button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

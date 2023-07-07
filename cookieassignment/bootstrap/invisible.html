@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <title>classwork</title>
+</head>
+
+<body>
+    <div class="container">
+        <button class="btn1 btn-primary" id="homebtn">Home</button>
+        <button class="btn2 btn-primary" id="aboutbtn">About</button>
+        <button class="btn3 btn-primary" id="contactbtn">Contact Us</button>
+
+        <div class="hometext text1 visible">
+            <p class="">
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                Ipsum, perferendis aperiam magnam praesentium blanditiis iste itaque incidunt nulla illo et
+                accusantium neque culpa quidem excepturi,
+                ut veritatis eius tempora dicta.
+            </p>
+        </div>
+
+        <div class="aboutttext text2 invisible">
+            <p class="">
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+
+            </p>
+        </div>
+
+        <div class="contacttext text3 invisible">
+            <p class="">
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+
+            </p>
+        </div>
+
+    </div>
+
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script>
+        let homeBtn = document.querySelector('#homebtn')
+        let aboutBtn = document.querySelector('#aboutbtn')
+        let contactBtn = document.querySelector('#contactbtn')
+
+        let homeText = document.querySelector('.text1')
+        let aboutText = document.querySelector('.text2')
+        let contactText = document.querySelector('.text3')
+
+
+        const showHomeText = () => {
+            //show home
+            homeText.classList.add('visible');
+            homeText.classList.remove('invisible');
+
+            //remove about
+            aboutText.classList.add('invisible');
+            aboutText.classList.remove('visible');
+            //hide contact
+            contactText.classList.add('invisible');
+            contactText.classList.remove('visible');
+        }
+
+        const showAboutText = () => {
+            aboutText.classList.add('visible');
+            aboutText.classList.remove('invisible');
+
+            //hide home
+            homeText.classList.add('invisible');
+            homeText.classList.remove('visible');
+
+            //hide contact
+            contactText.classList.add('invisible')
+            contactText.classList.remove('visible');
+        }
+
+        const showContactText = () => {
+
+            contactText.classList.add('visible');
+            contactText.classList.remove('invisible');
+
+            //hide home
+            homeText.classList.add('invisible');
+            homeText.classList.remove('visible');
+
+            //hide about
+            aboutText.classList.add('invisible');
+            aboutText.classList.remove('visible');
+
+
+        }
+
+
+        homeBtn.addEventListener('click', showHomeText)
+        aboutBtn.addEventListener('click', showAboutText)
+        contactBtn.addEventListener('click', showContactText)
+
+    </script>
+</body>
+
+</html>

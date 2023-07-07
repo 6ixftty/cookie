@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cookieform</title>
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="loginbox">
+        <img src="img/person-male.png" alt="user" class="user">
+        <h2>Log In Here</h2>
+        <form action="" method="post">
+            <p>Email</p>
+            <input type="email" name="" placeholder="Enter Email" class="submit">
+            <p>Password</p>
+            <input type="password" name="" placeholder="********" class="submit">
+            <input type="submit" name="" value="Sign In" class="submit">
+            <a href="index.html">Forget Password</a>
+        </form>
+    </div>
+
+    <script src="bootstrap/js/jquery.min.js"></script>
+    <script src="bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            setTimeout(() => {
+                if (confirm("do you want to accept cookies?")) {
+                    acceptcookie()
+                }
+            }, 3000)
+
+            function acceptcookie() {
+                $.ajax({
+                    url: 'http://localhost/farmwebsite',
+                    type: 'post',
+                    data: { music: 'celine', category: 'afro' },
+                    beforeSend: function () {
+                        $(".submitbtn").html("please wait...")
+                    },
+                    success: function (response) {
+                        console.log(response)
+                        $("#postbtn").html("send AJAX post")
+
+
+
+                    }
+                })
+            }
+        })
+    </script>
+</body>
+
+</html>
